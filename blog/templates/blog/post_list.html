@@ -1,28 +1,22 @@
 <html>
         <head>
             <title>Django Girls blog</title>
-            <style>
-                *{
-                    margin: 0;
-                    padding: 0;
-
-                }
-            </style>
+        
         </head>
         <body>
-        <div style = "background: #f1f1f1;">
+       
             <div>
                 <h1><a href="">Django Girls Blog</a></h1>
             </div>
 
             {% for post in posts %}
-            <div style = "margin-top:10px;padding: 5px;background: #ffffff;">
+            <div>
             <p>published: {{ post.published_date }}</p>
             <h1><a href="">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
             </div>
             {% endfor %}
 
-            </div>  
+           
         </body>
     </html>
